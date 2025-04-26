@@ -1,0 +1,83 @@
+{
+  "name": "shadeui-dev",
+  "description": "An A.I powered component library and code distribution platform designed to streamline your development workflow. - Created by ShadeUI Dev",
+  "author": "ShadeUI Dev",
+  "license": "ISC",
+  "keywords": [
+    "Figma",
+    "Design System",
+    "UI",
+    "UI Design",
+    "User Experience",
+    "UI Kit",
+    "UX",
+    "UX Design",
+    "UI Components",
+    "Design",
+    "Dashboard",
+    "Frontend",
+    "Frontend library",
+    "Open Source",
+    "Open Code",
+    "Landing Page",
+    "Library Components",
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Server Components",
+    "Radix UI",
+    "AI",
+    "Artificial Intelligence"
+  ],
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "rollup": "rollup -c",
+    "clean": "rimraf dist",
+    "prepare": "npm run build",
+    "tailwind:init": "tailwindcss-cli init -p",
+    "build:css": "postcss styles/tailwind.css -o dist/tailwind.css"
+  },
+  "dependencies": {
+    "react": ">=16.8.0",
+    "react-dom": "^19.1.0",
+    "tslib": "^2.8.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@tailwindcss/postcss": "^4.1.4",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.2",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "rollup": "^4.39.0",
+    "rollup-plugin-dts": "^6.2.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tailwindcss": "^4.1.4",
+    "tailwindcss-cli": "^0.1.2",
+    "typescript": "^5.8.3"
+  },
+  "version": "1.0.0"
+}
