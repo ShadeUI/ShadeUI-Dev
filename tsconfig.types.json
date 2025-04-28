@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "emitDeclarationOnly": true,  // Only emit .d.ts files, no .js
+      "declaration": true,          // Enable generation of .d.ts files
+      "declarationDir": "./dist/esm/types", // Where to save declaration files
+      "outDir": "./dist/esm/types",         // Ensure the types are output to the right folder
+      "strict": true,                       // Enable strict type-checking
+      "module": "ESNext",                   // For module compatibility
+      "target": "ESNext",                   // Use latest ECMAScript
+      "moduleResolution": "Node",           // For module resolution
+      "esModuleInterop": true,              // Allow for non-ESM imports
+      "skipLibCheck": true                  // Skip library check (helps speed up build)
+    },
+    "include": ["src"]  // Include all the files from the `src` folder
+  }
+  
