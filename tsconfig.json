@@ -118,5 +118,10 @@
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    },
+
   },
 }
