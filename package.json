@@ -1,8 +1,14 @@
 {
-  "name": "shadeui-dev",
+  "name": "@shadeui/shadeui",
   "description": "An A.I powered component library and code distribution platform designed to streamline your development workflow. - Created by ShadeUI Dev",
   "author": "ShadeUI Dev",
   "license": "ISC",
+  "version": "1.0.0-beta.3",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "beta"
+  },
   "keywords": [
     "Figma",
     "Design System",
@@ -110,6 +116,6 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
     "vite-tsconfig-paths": "^5.1.4"
-  },
-  "version": "1.0.0"
+  }
 }
+
