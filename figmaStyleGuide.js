@@ -279,6 +279,15 @@ export default {
           'largeshadow-sm': '0px 9px 18px 0px rgba(32, 32, 32, 0.04), 0px 0px 9px -1px rgba(32, 32, 32, 0.04)',
           'largeshadow-md': '0px 10px 20px 0px rgba(32, 32, 32, 0.04), 0px 0px 10px -1px rgba(32, 32, 32, 0.04)',
           'largeshadow-l': '0px 10px 20px 0px rgba(32, 32, 32, 0.04), 0px 0px 10px 0px rgba(32, 32, 32, 0.04)',
+
+        //flat button shadow
+          'btndefault':'0px 1px 2px 0px rgba(0, 0, 0, 0.05)',
+          'btnblue-focus': '0px 0px 0px 5px rgba(49, 76, 196, 0.08), 0px 0px 0px 2px #FFF',
+          'btnred-focus': '0px 0px 0px 5px rgba(206, 44, 49, 0.12), 0px 0px 0px 2px #FFF',
+          'btnpurple-focus': '0px 0px 0px 5px rgba(168, 85, 247, 0.12), 0px 0px 0px 2px #FFF',
+          'btnblack-focus': '0px 0px 0px 4px rgba(128, 131, 141, 0.12), 0px 0px 0px 2px #FFF',
+          'btnorange-focus': '0px 0px 0px 5px rgba(251, 146, 60, 0.12), 0px 0px 0px 2px #FFF',
+          'btnneutral-focus': '0px 0px 0px 4px rgba(26, 26, 26, 0.12), 0px 0px 0px 2px #FFF',
       },
 
       blur: {
