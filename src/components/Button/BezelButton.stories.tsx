@@ -16,6 +16,9 @@ export default {
     showLeftIcon: { control: 'boolean' },
     showRightIcon: { control: 'boolean' },
     iconOnly: { control: 'boolean' },
+
+    leftIcon: { table: { disable: true } }, 
+    rightIcon: { table: { disable: true } }, 
   },
 } as Meta<BezelButtonProps>;
 

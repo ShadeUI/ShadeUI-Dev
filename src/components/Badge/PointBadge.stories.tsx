@@ -24,8 +24,8 @@ export default {
     loadingText: { control: 'text' },
     label: { control: 'text' },
     showRightIcon: { control: false },
-    rightIcon: { control: false },
     className: { control: false },
+    rightIcon: { table: { disable: true } }, 
   },
 } as Meta<PointBadgeProps>;
 

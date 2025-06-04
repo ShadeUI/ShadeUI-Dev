@@ -26,6 +26,8 @@ export default {
     label: { control: 'text' },
     showLeftIcon: { control: 'boolean' },
     showRightIcon: { control: 'boolean' },
+    leftIcon: { table: { disable: true } }, 
+    rightIcon: { table: { disable: true } }, 
   },
 } as Meta<SolidBadgeProps>;
 
