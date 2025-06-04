@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { RoundBanner } from './RoundBanner';
 
@@ -6,6 +5,11 @@ const meta: Meta<typeof RoundBanner> = {
   title: 'Components/Banner/RoundBanner',
   component: RoundBanner,
   tags: ['autodocs'],
+    argTypes: {
+    linkButton: { table: { disable: true } }, 
+    badge: { table: { disable: true } }, 
+    closeButton: { table: { disable: true } }, 
+  },
 };
 
 export default meta;
