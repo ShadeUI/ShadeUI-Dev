@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+
+@theme{
+    --shadeui-color-blue-25: #F5FAFF;
+    --shadeui-color-blue-50: #EFF8FF;
+    --shadeui-color-blue-100 : #D1E9FF;
+    --shadeui-color-blue-200 : #B2DDFF;
+    --shadeui-color-blue-300 : #84CAFF;
+    --shadeui-color-blue-400 : #53B1FD;
+    --shadeui-color-blue-500 : #2E90FA;
+    --shadeui-color-blue-600 : #1570EF;
+    --shadeui-color-blue-700 : #175CD3;
+    --shadeui-color-blue-800 : #1849A9;
+    --shadeui-color-blue-900 : #194185;
+    --shadeui-color-blue-950 : #102A56;
+
+    --shadeui-color-red-25: #fef7f7;
+    --shadeui-color-red-50: #fef2f2;
+    --shadeui-color-red-100: #fee2e2;
+    --shadeui-color-red-200: #fecaca;
+    --shadeui-color-red-300: #fca5a5;
+    --shadeui-color-red-400: #f87171;
+    --shadeui-color-red-500: #ef4444;
+    --shadeui-color-red-600: #dc2626;
+    --shadeui-color-red-700: #b91c1c;
+    --shadeui-color-red-800: #991b1b;
+    --shadeui-color-red-900: #7f1d1d;
+    --shadeui-color-red-950: #450a0a;
+
+    --shadeui-color-green-25: #f4fdf7;
+    --shadeui-color-green-50: #f0fdf4;
+    --shadeui-color-green-100: #dcfce7;
+    --shadeui-color-green-200: #bbf7d0;
+    --shadeui-color-green-300: #86efac;
+    --shadeui-color-green-400: #4ade80;
+    --shadeui-color-green-500: #22c55e;
+    --shadeui-color-green-600: #16a34a;
+    --shadeui-color-green-700: #15803d;
+    --shadeui-color-green-800: #166534;
+    --shadeui-color-green-900: #14532d;
+    --shadeui-color-green-950: #052e16;
+
+    --shadeui-color-yellow-25: #fefdea;
+    --shadeui-color-yellow-50: #fefce8;
+    --shadeui-color-yellow-100: #fef9c3;
+    --shadeui-color-yellow-200: #fef08a;
+    --shadeui-color-yellow-300: #fde047;
+    --shadeui-color-yellow-400: #facc15;
+    --shadeui-color-yellow-500: #eab308;
+    --shadeui-color-yellow-600: #ca8a04;
+    --shadeui-color-yellow-700: #a16207;
+    --shadeui-color-yellow-800: #854d0e;
+    --shadeui-color-yellow-900: #713f12;
+    --shadeui-color-yellow-950: #422006;
+
+    --shadeui-color-orange-25: #fffaf4;
+    --shadeui-color-orange-50: #fff7ed;
+    --shadeui-color-orange-100: #ffedd5;
+    --shadeui-color-orange-200: #fed7aa;
+    --shadeui-color-orange-300: #fdba74;
+    --shadeui-color-orange-400: #fb923c;
+    --shadeui-color-orange-500: #f97316;
+    --shadeui-color-orange-600: #ea580c;
+    --shadeui-color-orange-700: #c2410c;
+    --shadeui-color-orange-800: #9a3412;
+    --shadeui-color-orange-900: #7c2d12;
+    --shadeui-color-orange-950: #1E254D;
+
+    --shadeui-color-purple-25: #f9f7ff;
+    --shadeui-color-purple-50: #faf5ff;
+    --shadeui-color-purple-100: #f3e8ff;
+    --shadeui-color-purple-200: #e9d5ff;
+    --shadeui-color-purple-300: #d8b4fe;
+    --shadeui-color-purple-400: #c084fc;
+    --shadeui-color-purple-500: #a855f7;
+    --shadeui-color-purple-600: #9333ea;
+    --shadeui-color-purple-700: #7e22ce;
+    --shadeui-color-purple-800: #6b21a8;
+    --shadeui-color-purple-900: #581c87;
+    --shadeui-color-purple-950: #3b0764;
+
+    --shadeui-color-slate-25: #fbfcfd;
+    --shadeui-color-slate-50: #f8fafc;
+    --shadeui-color-slate-100: #f1f5f9;
+    --shadeui-color-slate-200: #e2e8f0;
+    --shadeui-color-slate-300: #cbd5e1;
+    --shadeui-color-slate-400: #94a3b8;
+    --shadeui-color-slate-500: #64748b;
+    --shadeui-color-slate-600: #475569;
+    --shadeui-color-slate-700: #334155;
+    --shadeui-color-slate-800: #1e293b;
+    --shadeui-color-slate-900: #0f172a;
+    --shadeui-color-slate-950: #020617;
+
+    --shadeui-color-gray-25: #fbfbfc;
+    --shadeui-color-gray-50: #f9fafb;
+    --shadeui-color-gray-100: #f3f4f6;
+    --shadeui-color-gray-200: #e5e7eb;
+    --shadeui-color-gray-300: #d1d5db;
+    --shadeui-color-gray-400: #9ca3af;
+    --shadeui-color-gray-500: #6b7280;
+    --shadeui-color-gray-600: #4b5563;
+    --shadeui-color-gray-700: #374151;
+    --shadeui-color-gray-800: #1f2937;
+    --shadeui-color-gray-900: #111827;
+    --shadeui-color-gray-950: #030712;
+
+    --shadeui-color-zinc-25: #fcfcfc;
+    --shadeui-color-zinc-50: #fafafa;
+    --shadeui-color-zinc-100: #f4f4f5;
+    --shadeui-color-zinc-200: #e4e4e7;
+    --shadeui-color-zinc-300: #d4d4d8;
+    --shadeui-color-zinc-400: #a1a1aa;
+    --shadeui-color-zinc-500: #71717a;
+    --shadeui-color-zinc-600: #52525b;
+    --shadeui-color-zinc-700: #3f3f46;
+    --shadeui-color-zinc-800: #27272a;
+    --shadeui-color-zinc-900: #18181b;
+    --shadeui-color-zinc-950: #09090b;
+
+    --shadeui-color-black-0: #000000;
+    --shadeui-color-black-10: rgba(0, 0, 0, 0.1);
+    --shadeui-color-black-20: rgba(0, 0, 0, 0.2);
+    --shadeui-color-black-40: rgba(0, 0, 0, 0.4);
+    --shadeui-color-black-60: rgba(0, 0, 0, 0.6);
+    --shadeui-color-black-80: rgba(0, 0, 0, 0.8);
+    --shadeui-color-black-100: rgba(0, 0, 0, 1);
+
+    --shadeui-color-white-0: #FFFFFF;
+    --shadeui-color-white-10: rgba(255, 255, 255, 0.1);
+    --shadeui-color-white-20: rgba(255, 255, 255, 0.2);
+    --shadeui-color-white-40: rgba(255, 255, 255, 0.4);
+    --shadeui-color-white-60: rgba(255, 255, 255, 0.6);
+    --shadeui-color-white-80: rgba(255, 255, 255, 0.8);
+    --shadeui-color-white-100: rgba(255, 255, 255, 1);
+
+
+    /*
+    //small
+    --shadow-smallshadow-xs: 0px 1px 4px -1px rgba(32, 32, 32, 0.02);
+    --shadow-smallshadow-sm: 0px 2px 4px -1px rgba(32, 32, 32, 0.02), 0px 0px 4px 0px rgba(32, 32, 32, 0.02);
+    --shadow-smallshadow-md: 0px 4px 4px 0px rgba(32, 32, 32, 0.02), 0px 0px 4px -1px rgba(32, 32, 32, 0.02);
+    --shadow-smallshadow-l: 0px 0px 6px 0px rgba(32, 32, 32, 0.02), 0px 6px 6px 0px rgba(32, 32, 32, 0.02);
+
+    --shadow-smallshadowfocused-xs: 0px 0px 0px 0.8px rgba(32, 32, 32, 0.05);
+    --shadow-smallshadowfocused-sm: 0px 0px 0px 1.2px rgba(32, 32, 32, 0.05);
+    --shadow-smallshadowfocused-md: 0px 0px 0px 1.5px rgba(32, 32, 32, 0.05);
+    --shadow-smallshadowfocused-l: 0px 0px 0px 1.9px rgba(32, 32, 32, 0.05);
+
+    //medium
+    --shadow-mediumshadow-xs: 0px 5px 10px -1px rgba(32, 32, 32, 0.04);
+    --shadow-mediumshadow-sm: 0px 6px 12px -1px rgba(32, 32, 32, 0.04);
+    --shadow-mediumshadow-md: 0px 7px 14px 0px rgba(32, 32, 32, 0.04), 0px 0px 6px -1px rgba(32, 32, 32, 0.04);
+    --shadow-mediumshadow-l: 0px 8px 16px 0px rgba(32, 32, 32, 0.04), 0px 0px 8px -1px rgba(32, 32, 32, 0.04);
+
+    --shadow-mediumshadowfocused-xs: 0px 0px 0px 2px rgba(32, 32, 32, 0.05);
+    --shadow-mediumshadowfocused-sm: 0px 0px 0px 3px rgba(32, 32, 32, 0.05);
+    --shadow-mediumshadowfocused-md: 0px 0px 0px 4px rgba(32, 32, 32, 0.05);
+    --shadow-mediumshadowfocused-l: 0px 0px 0px 5px rgba(32, 32, 32, 0.05);
+
+    //large
+    --shadow-largeshadow-xs: 0px 8px 16px 0px rgba(32, 32, 32, 0.04), 0px 0px 8px -1px rgba(32, 32, 32, 0.04);
+    --shadow-largeshadow-sm: 0px 9px 18px 0px rgba(32, 32, 32, 0.04), 0px 0px 9px -1px rgba(32, 32, 32, 0.04);
+    --shadow-largeshadow-md: 0px 10px 20px 0px rgba(32, 32, 32, 0.04), 0px 0px 10px -1px rgba(32, 32, 32, 0.04);
+    --shadow-largeshadow-l: 0px 10px 20px 0px rgba(32, 32, 32, 0.04), 0px 0px 10px 0px rgba(32, 32, 32, 0.04);
+
+    //flat button shadow
+    --shadow-flatbtn-default: 0 1 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-flatbtnblue-focus:  0 0 0 5px rgba(49, 76, 196, 0.08), 0 0 0 2px #FFF;
+    --shadow-flatbtnred-focus:  0 0 0 5px rgba(206, 44, 49, 0.12), 0 0 0 2px #FFF;
+    --shadow-flatbtnpurple-focus:  0 0 0 5px rgba(168, 85, 247, 0.12), 0 0 0 2px #FFF;
+    --shadow-flatbtnblack-focus:  0 0 0 4px rgba(128, 131, 141, 0.12), 0 0 0 2px #FFF;
+    --shadow-flatbtnorange-focus:  0 0 0 5px rgba(251, 146, 60, 0.12), 0 0 0 2px #FFF;
+    --shadow-flatbtnneutral-focus:  0 0 0 4px rgba(26, 26, 26, 0.12), 0 0 0 2px #FFF; */
+}
