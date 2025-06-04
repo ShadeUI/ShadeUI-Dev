@@ -1,1 +1,7 @@
-export { default as Button } from './Button';
+export { default as SolidBadge } from './Badge/SolidBadge';
+export { default as StatusBadge } from './Badge/StatusBadge';
+export { default as PointBadge } from './Badge/PointBadge';
+export { default as FlatButton } from './Button/FlatButton';
+export { default as LinkButton } from './Button/LinkButton';
+export { default as BezelButton } from './Button/BezelButton';
+export { default as RoundBanner } from './Banner/RoundBanner';
