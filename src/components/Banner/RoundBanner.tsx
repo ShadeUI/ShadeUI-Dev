@@ -45,17 +45,17 @@ export function RoundBanner({
 
     const screenClasses: Record<Screen, string> = {
       web: 'text-sm font-normal leading-[16px] tracking-[0.168px]',
-      mobile: 'text-xs font-normal leading-[14px] tracking-[0.144px]',
+      mobile: 'text-[13px] font-normal leading-[14px] tracking-[0.144px]',
     };
 
     const bannerStyle: Record<Screen, string>  = {
       web: "flex px-3 py-1 justify-center items-center gap-[10px] self-stretch ",
-      mobile: "flex h-11 px-2 py-1 justify-between items-center self-stretch "
+      mobile: "flex h-11 px-3 py-1 justify-center items-center self-stretch "
     };
 
     const variantClasses: Record<Variant, string> = {
       accent:"text-[var(--shadeui-color-black-100)] dark:text-[var(--shadeui-color-white-80)] h-11 rounded-lg mx-4 my-3 ",
-      fill:"text-[var(--shadeui-color-white-100)] dark:text-[var(--shadeui-color-white-80)] h-12 rounded-lg mx-4 my-3 "
+      fill:"text-[var(--shadeui-color-white-100)] dark:text-[var(--shadeui-color-white-80)] h-11 rounded-lg mx-4 my-3 "
     }
 
     const linkColor = variant === 'fill' ? 'neutral' : color;
@@ -87,6 +87,7 @@ export function RoundBanner({
     const roundBannerClassNames = cn(
       baseStyles,
       screenClasses[screen],
+      {...props},
       className
     )
 
