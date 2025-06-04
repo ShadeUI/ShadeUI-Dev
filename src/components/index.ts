@@ -5,3 +5,4 @@ export { default as FlatButton } from './Button/FlatButton';
 export { default as LinkButton } from './Button/LinkButton';
 export { default as BezelButton } from './Button/BezelButton';
 export { default as RoundBanner } from './Banner/RoundBanner';
+export { default as SharpBanner } from './Banner/SharpBanner';
