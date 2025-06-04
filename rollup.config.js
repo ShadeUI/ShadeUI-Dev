@@ -9,14 +9,9 @@ import { readFileSync } from 'fs';
 
 const packageJson = JSON.parse(readFileSync('./package.json', 'utf-8'));
 
-const externalDeps = [
-  ...Object.keys(packageJson.peerDependencies || {}),
-];
-
-
 export default [
   {
-    input: "src/index.ts",
+    input:'src/index.ts',
     output: [
       { file: packageJson.main, format: "cjs", sourcemap: true },
       { file: packageJson.module, format: "esm", sourcemap: true },
@@ -24,20 +19,22 @@ export default [
     plugins: [
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json", declaration: false, declarationDir: null  }),
+      typescript({ tsconfig: "./tsconfig.json", declaration: false, declarationDir: null }),
       postcss({
         plugins: [tailwindcssPostcss(), autoprefixer()],
-        extract: true,
+        extract: 'styles.css',
         minimize: true,
         sourceMap: true,
       }),
     ],
-    external: externalDeps,
+    external: [
+      ...Object.keys(packageJson.peerDependencies || {}),
+    ],
   },
   {
     input: 'src/index.ts',
     output: [{ file: packageJson.types, format: "esm" }],
     plugins: [dts()],
-    external: externalDeps,
+    external:[/\.(css|less|scss)$/],
   },
 ];
