@@ -29,6 +29,8 @@ Default.args = {
   label: 'Button',
   size: 'md',
   color: 'blue',
+  leftIcon: <FiArrowLeft />,
+  rightIcon: <FiArrowRight />,
 };
 
 export const WithIcons = Template.bind({});

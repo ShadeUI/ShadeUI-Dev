@@ -39,6 +39,8 @@ Default.args = {
   showLeftIcon: true,
   showRightIcon: true,
   iconOnly: false,
+  leftIcon: <FiArrowLeft />,
+  rightIcon: <FiArrowRight />,
 };
 
 export const Loading = Template.bind({});
