@@ -6,3 +6,4 @@ export { default as LinkButton } from './Button/LinkButton';
 export { default as BezelButton } from './Button/BezelButton';
 export { default as RoundBanner } from './Banner/RoundBanner';
 export { default as SharpBanner } from './Banner/SharpBanner';
+export { default as TextArea } from './TextArea/TextArea';
