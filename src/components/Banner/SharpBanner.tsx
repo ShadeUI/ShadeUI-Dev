@@ -20,7 +20,7 @@ export type SharpBannerProps = {
     closeButton?: React.ReactNode;
     showCloseButton?: boolean;
     className?: string;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+} & React.HTMLAttributes<HTMLDivElement>;
 
 export function SharpBanner({
   label,
