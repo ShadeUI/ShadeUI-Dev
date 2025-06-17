@@ -18,8 +18,6 @@
 
 # ⚙ Installation
 
----
-
 ShadeUI is easy to integrate into your react existing project.
 
 ## ✅ Prerequisites
