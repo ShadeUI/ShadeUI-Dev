@@ -7,7 +7,6 @@ coverage
 .DS_Store
 
 # Storybook
-.storybook
 *storybook.log
 storybook-static
 
