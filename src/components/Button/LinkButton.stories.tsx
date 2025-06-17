@@ -1,23 +1,66 @@
 import { Meta, StoryFn } from '@storybook/react';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import LinkButton, { LinkButtonProps } from './LinkButton';
+import { commonArgTypes } from '../../storybook/argTypes/commonArgTypes';
 
 export default {
   title: 'Components/Button/Link Button',
   component: LinkButton,
   tags: ['autodocs'],
+parameters: {
+    docs: {
+      description: {
+        component:
+          'Link Button is designed for subtle navigation, featuring various styles that adapt to different contexts. It includes an icon-only version for a clean, minimal look and a version that combines icons with text for greater clarity. The design maintains a low profile, perfect for seamless linking. It is a lightweight button styled to resemble a link. Furthermore, It supports sizes, colors, loading state, icons, disabled state, and icon-only mode. Ideal for secondary or navigation-related actions.',
+      },
+    },
+  },
   argTypes: {
-    size: { control: 'radio', options: ['sm', 'md', 'lg'] },
-    color: { control: 'select', options: ['black', 'blue', 'danger', 'orange', 'purple', 'neutral'] },
-    disabled: { control: 'boolean' },
-    isLoading: { control: 'boolean' },
-    loadingText: { control: 'text' },
-    label: { control: 'text' },
-    showLeftIcon: { control: 'boolean' },
-    showRightIcon: { control: 'boolean' },
-    iconOnly: { control: 'boolean' },
-    leftIcon: { table: { disable: true } }, 
-    rightIcon: { table: { disable: true } }, 
+    ...commonArgTypes,
+    size: {
+      description: 'Controls the button size.',
+      control: 'radio',
+      options: ['sm', 'md', 'lg'],
+    },
+    color: {
+      description: 'Defines the button color scheme.',
+      control: 'select',
+      options: ['black', 'blue', 'danger', 'orange', 'purple', 'neutral'],
+    },
+    disabled: {
+      description: 'Disables the button and applies a disabled style.',
+      control: 'boolean',
+    },
+    isLoading: {
+      description: 'Displays a loading spinner.',
+      control: 'boolean',
+    },
+    loadingText: {
+      description: 'Text shown next to spinner when loading.',
+      control: 'text',
+    },
+    label: {
+      description: 'Text displayed inside the button.',
+      control: 'text',
+    },
+    showLeftIcon: {
+      description: 'Toggle visibility of the left icon (if provided).',
+      control: 'boolean',
+    },
+    showRightIcon: {
+      description: 'Toggle visibility of the right icon (if provided).',
+      control: 'boolean',
+    },
+    iconOnly: {
+      description: 'Renders the button as icon-only.',
+      control: 'boolean',
+    },
+    leftIcon: {
+      table: { disable: true },
+    },
+    rightIcon: {
+      table: { disable: true },
+    },
   },
 } as Meta<LinkButtonProps>;
 

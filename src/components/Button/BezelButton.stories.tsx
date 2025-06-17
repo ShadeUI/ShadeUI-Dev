@@ -1,24 +1,66 @@
 import { Meta, StoryFn } from '@storybook/react';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import BezelButton, { BezelButtonProps } from './BezelButton';
+import { commonArgTypes } from '../../storybook/argTypes/commonArgTypes';
 
 export default {
   title: 'Components/Button/Bezel Button',
   component: BezelButton,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'Bezel Button offers styles in various style options, ensuring flexibility for different contexts. It comes in two variations: one featuring only icons for a minimalist look, and another combining text and icons for clarity. The design maintains a modern feel with subtle elevation effects. It is a styled button component with a slightly elevated, beveled appearance. Supports multiple colors, sizes, icons, loading state, disabled state, and icon-only mode.',
+      },
+    },
+  },
   argTypes: {
-    size: { control: 'radio', options: ['sm', 'md', 'lg'] },
-    color: { control: 'select', options: ['black', 'blue', 'danger', 'orange', 'purple', 'neutral'] },
-    disabled: { control: 'boolean' },
-    isLoading: { control: 'boolean' },
-    loadingText: { control: 'text' },
-    label: { control: 'text' },
-    showLeftIcon: { control: 'boolean' },
-    showRightIcon: { control: 'boolean' },
-    iconOnly: { control: 'boolean' },
-
-    leftIcon: { table: { disable: true } }, 
-    rightIcon: { table: { disable: true } }, 
+    ...commonArgTypes,
+    size: {
+      description: 'Controls the button size.',
+      control: 'radio',
+      options: ['sm', 'md', 'lg'],
+    },
+    color: {
+      description: 'Sets the button color scheme.',
+      control: 'select',
+      options: ['black', 'blue', 'danger', 'orange', 'purple', 'neutral'],
+    },
+    disabled: {
+      description: 'Disables the button and applies a disabled appearance.',
+      control: 'boolean',
+    },
+    isLoading: {
+      description: 'Shows a loading spinner inside the button.',
+      control: 'boolean',
+    },
+    loadingText: {
+      description: 'Optional text displayed next to the spinner while loading.',
+      control: 'text',
+    },
+    label: {
+      description: 'Text displayed inside the button.',
+      control: 'text',
+    },
+    showLeftIcon: {
+      description: 'Toggle visibility of the left icon (if provided).',
+      control: 'boolean',
+    },
+    showRightIcon: {
+      description: 'Toggle visibility of the right icon (if provided).',
+      control: 'boolean',
+    },
+    iconOnly: {
+      description: 'Renders button as icon-only (no label).',
+      control: 'boolean',
+    },
+    leftIcon: {
+      table: { disable: true },
+    },
+    rightIcon: {
+      table: { disable: true },
+    },
   },
 } as Meta<BezelButtonProps>;
 

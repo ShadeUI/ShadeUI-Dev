@@ -1,31 +1,60 @@
 // Badge.stories.tsx
 import { Meta, StoryFn } from '@storybook/react';
 import PointBadge, { PointBadgeProps } from './PointBadge';
+import { commonArgTypes } from '../../storybook/argTypes/commonArgTypes';
+import { FiCheck } from 'react-icons/fi'; // <-- Added icon import
 
 export default {
   title: 'Components/Badge/Point Badge',
   component: PointBadge,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'PointBadge is a small, compact badge component used to display status, labels, or counts. A Point Badge uses a small circular dot alongside text or alone to subtly indicate status, activity, or notifications without overwhelming the interface. It supports multiple sizes, variants, colors, and states like loading or disabled.',
+      },
+    },
+  },
   argTypes: {
+    ...commonArgTypes,
     size: {
+      description: 'Controls the size of the badge.',
       control: 'radio',
       options: ['sm', 'md', 'lg'],
     },
     variant: {
+      description: 'Controls the visual style variant.',
       control: { type: 'select' },
       options: ['accent', 'fill', 'outline'],
     },
     color: {
+      description: 'Sets the badge color theme.',
       control: { type: 'select' },
       options: ['blue', 'danger', 'orange', 'purple', 'success', 'warning', 'zinc', 'slate', 'gray'],
     },
-    disabled: { control: 'boolean' },
-    isLoading: { control: 'boolean' },
-    loadingText: { control: 'text' },
-    label: { control: 'text' },
-    showRightIcon: { control: false },
-    className: { control: false },
-    rightIcon: { table: { disable: true } }, 
+    disabled: { 
+      description: 'Disables the badge interaction and applies a muted visual state.',
+      control: 'boolean' 
+    },
+    isLoading: { 
+      description: 'Displays a loading spinner inside the badge.',
+      control: 'boolean' 
+    },
+    loadingText: { 
+      description: 'Text to display while loading is active.',
+      control: 'text' 
+    },
+    label: { 
+      description: 'Text content displayed inside the badge.',
+      control: 'text' 
+    },
+    showRightIcon: { 
+      description: 'Toggles the visibility of the right icon inside the badge.',
+      control: 'boolean',
+    },
+    rightIcon: {
+      table: { disable: true },
+    },
   },
 } as Meta<PointBadgeProps>;
 
@@ -39,7 +68,7 @@ Default.args = {
     isLoading: false,
     disabled: false,
     label: 'Badge',
-    showRightIcon: false,
+    rightIcon: <FiCheck />
 };
 
 export const WithLabel = Template.bind({});
@@ -53,6 +82,14 @@ Loading.args = {
   ...Default.args,
   isLoading: true,
   loadingText: 'Loading...',
+};
+
+export const WithRightIcon = Template.bind({});
+WithRightIcon.args = {
+  ...Default.args,
+  label: 'Verified',
+  rightIcon: <FiCheck />,
+  showRightIcon: false,
 };
 
 export const AllSizes: StoryFn<PointBadgeProps> = (args) => (

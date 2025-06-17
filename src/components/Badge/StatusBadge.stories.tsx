@@ -1,31 +1,67 @@
-
 import { Meta, StoryFn } from '@storybook/react';
 import { FiArrowLeft, FiArrowRight, FiCheck } from 'react-icons/fi';
 import StatusBadge, { StatusBadgeProps } from './StatusBadge';
+import { commonArgTypes } from '../../storybook/argTypes/commonArgTypes';
+
 
 export default {
   title: "Components/Badge/Status Badge",
   component: StatusBadge,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'StatusBadge is a badge component used for displaying status indicators (success, warning, danger, etc). A Status Badge combines color, icons, and labels to communicate dynamic states like success, error, warning, or processing. It helps users quickly understand system feedback and statuses. It supports multiple variants, sizes, icons, and loading states. ',
+      },
+    },
+  },
   argTypes: {
+    ...commonArgTypes,
     size: {
-        control: 'radio',
-        options: ['sm', 'md', 'lg'],
+      description: 'Controls the size of the badge.',
+      control: 'radio',
+      options: ['sm', 'md', 'lg'],
     },
     variant: {
-        control: { type: 'select' },
-        options: ["accent",  "fill",  "outline" ]   
+      description: 'Determines the visual style variant.',
+      control: { type: 'select' },
+      options: ["accent", "fill", "outline"],
     },
     color: {
-        control: { type: 'select' },
-        options: [ "danger", "success", "warning", "zinc", "slate", "gray"] 
+      description: 'Sets the status color theme of the badge.',
+      control: { type: 'select' },
+      options: ["danger", "success", "warning", "zinc", "slate", "gray"],
     },
-    disabled: { control: 'boolean' },
-    isLoading: { control: 'boolean' },
-    loadingText: { control: 'text' },
-    label: { control: 'text' },
-    showLeftIcon: { control: 'boolean' },
-    showRightIcon: { control: 'boolean' },
+    disabled: {
+      description: 'Disables the badge, applying a muted, inactive state.',
+      control: 'boolean',
+    },
+    isLoading: {
+      description: 'Displays a loading spinner inside the badge.',
+      control: 'boolean',
+    },
+    loadingText: {
+      description: 'Text to show while loading is active.',
+      control: 'text',
+    },
+    label: {
+      description: 'Text displayed inside the button.',
+      control: 'text',
+    },
+    showLeftIcon: {
+      description: 'Toggles the visibility of the left icon.',
+      control: 'boolean',
+    },
+    showRightIcon: {
+      description: 'Toggles the visibility of the right icon.',
+      control: 'boolean',
+    },
+    leftIcon: {
+      table: { disable: true },
+    },
+    rightIcon: {
+      table: { disable: true },
+    },
   },
 } as Meta<StatusBadgeProps>;
 
@@ -41,6 +77,8 @@ Default.args = {
   isLoading: false,
   showLeftIcon: true,
   showRightIcon: true,
+  rightIcon: <FiArrowRight />,
+  leftIcon: <FiArrowLeft />
 };
 
 export const Loading = Template.bind({});
@@ -54,8 +92,6 @@ export const WithIcons = Template.bind({});
 WithIcons.args = {
   ...Default.args,
   label: 'Info',
-  leftIcon: <FiArrowLeft />,
-  rightIcon: <FiArrowRight />,
   showLeftIcon: true,
   showRightIcon: true,
 };

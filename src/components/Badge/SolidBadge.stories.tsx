@@ -2,34 +2,69 @@
 import { Meta, StoryFn } from '@storybook/react';
 import { FiArrowLeft, FiArrowRight, FiCheck } from 'react-icons/fi';
 import SolidBadge, { SolidBadgeProps } from './SolidBadge';
+import { commonArgTypes } from '../../storybook/argTypes/commonArgTypes';
 
 export default {
   title: "Components/Badge/Solid Badge",
   component: SolidBadge,
   tags: ['autodocs'],
+ parameters: {
+    docs: {
+      description: {
+        component: 'SolidBadge is a compact badge component used for highlighting status or metadata with optional icons, loading states, and multiple color/size variants. A Solid Badge displays bold, filled colors to highlight important statuses, labels, or counts. It’s ideal for drawing attention to critical UI elements.',
+      },
+    },
+  },
   argTypes: {
+    ...commonArgTypes,
     size: {
+      description: 'Controls the size of the badge.',
       control: 'radio',
       options: ['sm', 'md', 'lg'],
     },
     variant: {
+      description: 'Determines the visual style variant.',
       control: { type: 'select' },
-    options: ["accent",  "fill",  "outline" ]   
+      options: ["accent", "fill", "outline"],
     },
     color: {
+      description: 'Sets the color scheme of the badge.',
       control: { type: 'select' },
-    options: ["blue",  "danger",  "orange", "purple", "success", "warning", "zinc", "slate", "gray",] 
+      options: ["blue", "danger", "orange", "purple", "success", "warning", "zinc", "slate", "gray"],
     },
-    disabled: { control: 'boolean' },
-    isLoading: { control: 'boolean' },
-    loadingText: { control: 'text' },
-    label: { control: 'text' },
-    showLeftIcon: { control: 'boolean' },
-    showRightIcon: { control: 'boolean' },
-    leftIcon: { table: { disable: true } }, 
-    rightIcon: { table: { disable: true } }, 
+    disabled: {
+      description: 'Disables the badge, making it non-interactive and muted.',
+      control: 'boolean',
+    },
+    isLoading: {
+      description: 'Displays a loading spinner inside the badge.',
+      control: 'boolean',
+    },
+    loadingText: {
+      description: 'Text to display while loading is active.',
+      control: 'text',
+    },
+    label: {
+      description: 'Main text content inside the badge.',
+      control: 'text',
+    },
+    showLeftIcon: {
+      description: 'Whether to display the left icon.',
+      control: 'boolean',
+    },
+    showRightIcon: {
+      description: 'Whether to display the right icon.',
+      control: 'boolean',
+    },
+    leftIcon: {
+      table: { disable: true },
+    },
+    rightIcon: {
+      table: { disable: true },
+    },
   },
 } as Meta<SolidBadgeProps>;
+
 
 const Template: StoryFn<SolidBadgeProps> = (args) => <SolidBadge {...args} />;
 
@@ -41,8 +76,8 @@ Default.args = {
   color: 'blue',
   disabled: false,
   isLoading: false,
-  showLeftIcon: true,
-  showRightIcon: true,
+  rightIcon: <FiArrowRight />,
+  leftIcon: <FiArrowLeft />
 };
 
 export const Loading = Template.bind({});
