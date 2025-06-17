@@ -53,7 +53,7 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "rollup -c",
+    "build": "build-storybook",
     "dev": "rollup -c -w",
     "rollup": "rollup -c",
     "clean": "rimraf dist",
