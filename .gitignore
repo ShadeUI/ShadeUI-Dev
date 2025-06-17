@@ -1,5 +1,14 @@
+# Node
 node_modules
 dist
-.DS_Store
-*storybook.log
 coverage
+
+# System
+.DS_Store
+
+# Storybook
+*storybook.log
+storybook-static
+
+# Lockfiles
+package-lock.json
